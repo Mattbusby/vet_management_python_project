@@ -26,7 +26,7 @@ def select(id):
     sql = "SELECT * FROM pets WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-    if result in not None:
+    if result is not None:
         vet = vet_repository.select(result['vet_id'])
         pet = Pet(result['pet_name'], result['dob'], result['type of animal'], result['owner_name'], result['owner_ph'], result['treatment_notes'], vet)
     return pet
