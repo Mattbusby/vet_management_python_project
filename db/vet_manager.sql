@@ -16,7 +16,7 @@ CREATE TABLE pets (
     type_of_animal VARCHAR(255),
     owner_name VARCHAR(255),
     owner_ph VARCHAR(255),
-    treatment_notes TEXT
+    treatment_notes TEXT,
     vet_id INT REFERENCES vets(id)
 );
 
