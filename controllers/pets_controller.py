@@ -3,6 +3,7 @@ from flask import Blueprint
 from models.pet import Pet
 import repositories.pet_repository as pet_repository
 import repositories.vet_repository as vet_repository
+import pdb
 
 pets_blueprint = Blueprint("pets", __name__)
 
@@ -24,7 +25,8 @@ def create_pet():
     owner_name = request.form['owner_name']
     owner_ph = request.form['owner_ph']
     treatment_notes = request.form['treatment_notes']
-    pet = Pet(pet_name, dob, type_of_animal, owner_name, owner_ph, treatment_notes)
+    vet = vet_repository.select(request.form['vet_id'])
+    pet = Pet(pet_name, dob, type_of_animal, owner_name, owner_ph, treatment_notes, vet)
     pet_repository.save(pet)
     return redirect('/pets')
 

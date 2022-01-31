@@ -5,7 +5,7 @@ import repositories.vet_repository as vet_repository
 
 def save(pet):
     sql = "INSERT INTO pets (pet_name, dob, type_of_animal, owner_name, owner_ph, treatment_notes, vet_id) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING *"
-    values = [pet.pet_name, pet.dob, pet.type_of_animal, pet.owner_name, pet.owner_ph, pet.treatment_notes, pet.vet_id]
+    values = [pet.pet_name, pet.dob, pet.type_of_animal, pet.owner_name, pet.owner_ph, pet.treatment_notes, pet.vet.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     pet.id = id
@@ -17,7 +17,7 @@ def select_all():
     results = run_sql(sql)
     for row in results:
         vet = vet_repository.select(row['vet_id'])
-        pet = Pet(row['pet_name'], row['dob'], row['type of animal'], row['owner_name'], row['owner_ph'], row['treatment_notes'], vet)
+        pet = Pet(row['pet_name'], row['dob'], row['type_of_animal'], row['owner_name'], row['owner_ph'], row['treatment_notes'], vet)
         pets.append(pet)
     return pets
 
@@ -28,7 +28,7 @@ def select(id):
     result = run_sql(sql, values)[0]
     if result is not None:
         vet = vet_repository.select(result['vet_id'])
-        pet = Pet(result['pet_name'], result['dob'], result['type of animal'], result['owner_name'], result['owner_ph'], result['treatment_notes'], vet)
+        pet = Pet(result['pet_name'], result['dob'], result['type_of_animal'], result['owner_name'], result['owner_ph'], result['treatment_notes'], vet)
     return pet
 
 def delete_all():
