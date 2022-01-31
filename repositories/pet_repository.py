@@ -5,7 +5,7 @@ import repositories.vet_repository as vet_repository
 
 def save(pet):
     sql = "INSERT INTO pets (pet_name, dob, type_of_animal, owner_name, owner_ph, treatment_notes, vet_id) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING *"
-    values = [pet.pet_name, pet.dob, pet.type_of_animal, pet.owner_name, pet.owner_ph, pet.treatment_notes, pet.author.id]
+    values = [pet.pet_name, pet.dob, pet.type_of_animal, pet.owner_name, pet.owner_ph, pet.treatment_notes, pet.vet_id]
     results = run_sql(sql, values)
     id = results[0]['id']
     pet.id = id
@@ -36,13 +36,13 @@ def delete_all():
     run_sql(sql)
 
 def delete(id):
-    sql = "DELETE FROM pets     WHERE id = %s"
+    sql = "DELETE FROM pets WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 
 def update(pet):
     sql = "UPDATE pets set (pet_name, dob, type_of_animal, owner_name, owner_ph, treatment_notes, vet_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
-    values = [pet.pet_name, pet.dob, pet.type_of_animal, pet.owner_name, pet.owner_ph, pet.treatment_notes, pet.author.id, pet.id]
+    values = [pet.pet_name, pet.dob, pet.type_of_animal, pet.owner_name, pet.owner_ph, pet.treatment_notes, pet.vet.id, pet.id]
     print(values)
     run_sql(sql, values)
 

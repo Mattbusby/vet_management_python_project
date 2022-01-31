@@ -1,6 +1,7 @@
 from db.run_sql import run_sql
 from models.vet import Vet
 from models.pet import Pet
+import pdb
 
 def save(vet):
     sql = "INSERT INTO vets (first_name, last_name, grad_date, fun_fact) VALUES (%s, %s, %s, %s) RETURNING *"

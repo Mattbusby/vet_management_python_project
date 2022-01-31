@@ -37,7 +37,7 @@ def show_pet(id):
 def edit_pet(id):
     pet = pet_repository.select(id)
     vets = vet_repository.select_all()
-    return render_template('pets/edit.html', pet = pet, vets = all_vets)
+    return render_template('pets/edit.html', pet = pet, all_vets = vets)
 
 @pets_blueprint.route("/pets/<id>", methods = ['POST'])
 def update_pet(id):

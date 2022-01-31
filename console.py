@@ -10,8 +10,8 @@ vet_repository.delete_all()
 
 vet1 = Vet("William", "Rennie", "01.02.2010", "He likes turtles")
 vet_repository.save(vet1)
-# vet2 = Vet(   NAME  ETC    )
-# vet_repository.save(vet2)
+# # vet2 = Vet(   NAME  ETC    )
+# # vet_repository.save(vet2)
 
 
 pet_1 = Pet("Esiotrot", "01.01.2020", "Tortoise", "Bob Ross", "0123456789", "Likes lettuce", vet1)
