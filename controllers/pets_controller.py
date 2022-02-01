@@ -61,8 +61,15 @@ def delete_pet(id):
     pet_repository.delete(id)
     return redirect('/pets')
     
+@pets_blueprint.route("/vets")
+def vets():
+    vets = vet_repository.select_all()
+    return render_template("vets/index.html", all_vets = vets)
     
-    
+@pets_blueprint.route("/vets/<id>", methods=['GET'])
+def show_vet(id):
+    vet = vet_repository.select(id)
+    return render_template('vets/view.html', vet = vet)
 
 
 
