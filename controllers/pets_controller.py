@@ -68,5 +68,4 @@ def delete_pet(id):
 
 
 
-# check line 7 blueprint name vs other files
 # new/create/show/edit/update/delete

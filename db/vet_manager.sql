@@ -20,7 +20,7 @@ CREATE TABLE pets (
     vet_id INT REFERENCES vets(id)
 );
 
--- SELECT * FROM vets;
--- SELECT * FROM pets;
+SELECT * FROM vets;
+SELECT * FROM pets;
 
 -- add owners as a class later if pushing for many to many with pets becoming the link

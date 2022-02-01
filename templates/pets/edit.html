@@ -4,32 +4,32 @@
 <form action="/pets/{{pet.id}}" method="post">
     <div>
         <label for="pet_name">Pet's Name:</label>
-        <input type="text" id="pet_name" name="pet_name" placeholder="{{pet.pet_name}}" required autofocus>
+        <input type="text" id="pet_name" name="pet_name" value="{{pet.pet_name}}" required autofocus>
       </div>
 
       <div>
         <label for="dob">Date of birth:</label>
-        <input type="text" id="dob" name="dob" placeholder="{{pet.dob}}" required>
+        <input type="text" id="dob" name="dob" value="{{pet.dob}}" required>
       </div>
 
       <div>
         <label for="type_of_animal">Type of animal:</label>
-        <input type="text" id="type_of_animal" name="type_of_animal" placeholder="{{pet.type_of_animal}}" required>
+        <input type="text" id="type_of_animal" name="type_of_animal" value="{{pet.type_of_animal}}" required>
       </div>
 
       <div>
         <label for="owner_name">Owner's name:</label>
-        <input type="text" id="owner_name" name="owner_name" placeholder="{{pet.owner_name}}" required>
+        <input type="text" id="owner_name" name="owner_name" value="{{pet.owner_name}}" required>
       </div>
     
       <div>
         <label for="owner_ph">Contact Telephone Number:</label>
-        <input type="text" id="owner_ph" name="owner_ph" placeholder="{{pet.owner_ph}}" required>
+        <input type="text" id="owner_ph" name="owner_ph" value="{{pet.owner_ph}}" required>
       </div>
     
       <div>
         <label for="treatment_notes">Anything we should know about your pet?</label>
-        <input type="text" id="treatment_notes" name="treatment_notes" placeholder="{{pet.treatment_notes}}">
+        <input type="text" id="treatment_notes" name="treatment_notes" value="{{pet.treatment_notes}}">
       </div>
 
   <div>

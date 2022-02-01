@@ -2,6 +2,7 @@ from db.run_sql import run_sql
 from models.pet import Pet
 from models.vet import Vet
 import repositories.vet_repository as vet_repository
+import pdb
 
 def save(pet):
     sql = "INSERT INTO pets (pet_name, dob, type_of_animal, owner_name, owner_ph, treatment_notes, vet_id) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING *"
@@ -17,7 +18,7 @@ def select_all():
     results = run_sql(sql)
     for row in results:
         vet = vet_repository.select(row['vet_id'])
-        pet = Pet(row['pet_name'], row['dob'], row['type_of_animal'], row['owner_name'], row['owner_ph'], row['treatment_notes'], vet)
+        pet = Pet(row['pet_name'], row['dob'], row['type_of_animal'], row['owner_name'], row['owner_ph'], row['treatment_notes'], vet, row['id'])
         pets.append(pet)
     return pets
 
@@ -28,7 +29,7 @@ def select(id):
     result = run_sql(sql, values)[0]
     if result is not None:
         vet = vet_repository.select(result['vet_id'])
-        pet = Pet(result['pet_name'], result['dob'], result['type_of_animal'], result['owner_name'], result['owner_ph'], result['treatment_notes'], vet)
+        pet = Pet(result['pet_name'], result['dob'], result['type_of_animal'], result['owner_name'], result['owner_ph'], result['treatment_notes'], vet, result['id'])
     return pet
 
 def delete_all():

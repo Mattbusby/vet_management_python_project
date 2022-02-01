@@ -1,7 +1,6 @@
 import pdb
 from models.pet import Pet
 from models.vet import Vet
-# import repositories.pet_repository as pet_repository
 import repositories.vet_repository as vet_repository
 import repositories.pet_repository as pet_repository
 
@@ -19,11 +18,11 @@ vet_repository.save(vet2)
 pet1 = Pet("Esiotrot", "01.01.2020", "Tortoise", "Bob Ross", "0123456789", "Likes lettuce", vet1)
 pet_repository.save(pet1)
 
-# pet2 = Pet(   NAME  ETC    , vet1)
-# pet_repository.save(pet2)
+pet2 = Pet("Jim", "27.01.2022", "Earthworm", "Ralph Wiggum", "0144 269 442", "allergic to crows", vet2)
+pet_repository.save(pet2)
 
-# pet3 = Pet(   NAME  ETC    , vet2)
-# pet_repository.save(pet3)
+pet3 = Pet("Harley", "22.08.1985", "Cat", "June Greer", "02890 652238", "Loud snore", vet2)
+pet_repository.save(pet3)
 
 # Pet4 = Pet(   NAME  ETC    , vet1)
 # pet_repository.save(pet4)
@@ -34,7 +33,7 @@ pet_repository.save(pet1)
 # pet6 = Pet(   NAME  ETC    , vet2)
 # pet_repository.save(pet6)
 
-pdb.set_trace()
+# pdb.set_trace()
 
 
 # pets and vets needed
