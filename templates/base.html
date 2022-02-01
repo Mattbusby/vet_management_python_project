@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malone Vets</title>
+    <title>Malone Veterinary Practice</title>
 </head>
 <body>
     <header>
+        <h1>Malone Veterinary Practice</h1>
+        <h3>We are committed to bringing you the highest level of veterinary healthcare for your beloved animal friends.</h3>
         <nav>
             <ul class="menu">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -15,7 +17,6 @@
                 <li><a href="{{ url_for('pets.new_pet') }}">New Pet</a></li>
                 <li><a href="{{ url_for('pets.vets') }}">Vets</a></li>
                 <li><a href="{{ url_for('pets.new_vet') }}">New Vet</a></li>
-
             </ul>
         </nav>
     </header>
