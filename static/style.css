@@ -1,0 +1,37 @@
+* {
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Helvetica", Arial, sans-serif; font-size: 18px;
+}
+
+#home-image {
+    width:100vw;
+    height:10%;
+    background-image:url('images/sunny_field.jpeg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    object-fit:cover;
+}
+
+.menu {
+    height:100%;
+    width:12%;
+    position:fixed;
+    z-index:1;
+    top: 12%;
+    left:0;
+    background-color: lightgrey;
+    overflow-x: hidden;
+    color: white;
+    padding: 1%;
+    text-decoration: none;
+    display:block;
+    text-align:center;
+}
+
+.menu:hover {
+    background-color: darkgray;
+    color: black;
+}
