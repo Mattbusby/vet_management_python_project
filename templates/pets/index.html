@@ -6,9 +6,9 @@
     <div class="content">
       <a href="/pets/{{pet.id}}">{{pet.pet_name}}</a>
       <div class="title">
-        {{pet.type_of_animal}}: {{pet.dob}}
-        <span class="owner_name">{{pet.owner_name}}</span>
-        <p><i>{{pet.vet.full_name()}}</i></p>
+        {{pet.type_of_animal}}, born {{pet.dob}}
+        <br><span class="owner_name">Cared for by {{pet.owner_name}}</span>
+        <p><i>Current Vet: {{pet.vet.full_name()}} - {{pet.vet.fun_fact}}</i></p>
       </div>
       <div class="buttons">
 

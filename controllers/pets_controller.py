@@ -71,7 +71,10 @@ def show_vet(id):
     vet = vet_repository.select(id)
     return render_template('vets/view.html', vet = vet)
 
-
+@pets_blueprint.route("/vets/<id>/edit", methods=['GET'])
+def edit_vet(id):
+    vet = vet_repository.select(id)
+    return render_template('vets/edit.html', vet = vet)
 
 
 
