@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/vets" method="post">
+    <div>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" placeholder="First Name" required autofocus>
+      </div>
+
+      <div>
+        <label for="last_name">Surname:</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Surname" required>
+      </div>
+
+      <div>
+        <label for="grad_date">Graduated:</label>
+        <input type="text" id="grad_date" name="grad_date" placeholder="dd.mm.yyyy" required>
+      </div>
+
+      <div>
+        <label for="fun_fact">Fun Fact:</label>
+        <input type="text" id="fun_fact" name="fun_fact" placeholder="Fun Fact" required>
+      </div>
+
+  <button type="submit">Add Vet</button>
+
+</form>
+
+{% endblock %}
