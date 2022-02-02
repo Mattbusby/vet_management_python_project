@@ -14,13 +14,13 @@
         <h3>We are committed to bringing you the highest level of veterinary healthcare for your beloved animal friends.</h3>
     </section>
         <nav>
-            <ul class="menu">
-                <li><a href="{{ url_for('home') }}">Home</a></li><br>
-                <li><a href="{{ url_for('pets.pets') }}">Pets</a></li><br>
-                <li><a href="{{ url_for('pets.new_pet') }}">New Pet</a></li><br>
-                <li><a href="{{ url_for('pets.vets') }}">Vets</a></li><br>
-                <li><a href="{{ url_for('pets.new_vet') }}">New Vet</a></li><br>
-            </ul>
+            <div class="sidemenu">
+                <hr><a href="{{ url_for('home') }}">Home</a><hr>
+                <a href="{{ url_for('pets.pets') }}">Your Pets</a>
+                <a href="{{ url_for('pets.new_pet') }}">Register a New Pet</a><hr>
+                <a href="{{ url_for('pets.vets') }}">Meet the Team</a>
+                <a href="{{ url_for('pets.new_vet') }}">Register as a New Vet</a><hr>
+            </div>
         </nav>
     </header>
     <div class="container">
@@ -30,6 +30,7 @@
     {%block home%}
     {% endblock %}
 <footer>
+    <div class="footer"><p>Contact Us<br>Careers</p></div>
     
 </footer>
 </body>

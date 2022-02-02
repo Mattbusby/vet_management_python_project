@@ -2,36 +2,73 @@
     box-sizing:border-box;
 }
 
+/* .footer {
+    height: 10%;
+    width:85%;
+    background-color: hotpink;
+    position: absolute;
+    bottom: 0;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    z-index:0;
+
+} */
+
 body{
-    font-family:"Helvetica", Arial, sans-serif; font-size: 18px;
+    font-family:"Helvetica", Arial, sans-serif; font-size: 16px;
+    margin-left:15%;
+    padding-left:0;
 }
 
 #home-image {
-    width:100vw;
-    height:10%;
+    width:85vw;
+    height:20vh;
     background-image:url('images/sunny_field.jpeg');
     background-repeat:no-repeat;
     background-size:cover;
     object-fit:cover;
+    margin-top:0;
+    margin-left:0;
+    text-align: center;
+    font-size: 24px;
 }
 
-.menu {
+.sidemenu {
     height:100%;
-    width:12%;
+    width:15%;
     position:fixed;
     z-index:1;
-    top: 12%;
+    top:0;
     left:0;
     background-color: lightgrey;
     overflow-x: hidden;
-    color: white;
+}
+
+.sidemenu a {
+    color: rgb(68, 68, 68);
     padding: 1%;
     text-decoration: none;
     display:block;
     text-align:center;
 }
 
-.menu:hover {
-    background-color: darkgray;
-    color: black;
+.sidemenu a:hover {
+    background-color: black;
+    color: white;
 }
+
+.row {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.column {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
