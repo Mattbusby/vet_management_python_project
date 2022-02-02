@@ -1,25 +1,23 @@
 * {
     box-sizing:border-box;
+    margin: 0;
 }
 
-/* .footer {
-    height: 10%;
-    width:85%;
-    background-color: hotpink;
-    position: absolute;
+.footer {
+    height:7%;
+    width:100%;
+    background-color: rgb(183, 183, 164);
+    position: fixed;
     bottom: 0;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-evenly;
     text-align: center;
-    z-index:0;
-
-} */
+}
 
 body{
     font-family:"Helvetica", Arial, sans-serif; font-size: 16px;
     margin-left:15%;
     padding-left:0;
+    padding-bottom: 7%;
+    background-color: rgb(255, 232, 214);
 }
 
 #home-image {
@@ -28,6 +26,7 @@ body{
     background-image:url('images/sunny_field.jpeg');
     background-repeat:no-repeat;
     background-size:cover;
+    /* A5A58D */
     object-fit:cover;
     margin-top:0;
     margin-left:0;
@@ -42,12 +41,12 @@ body{
     z-index:1;
     top:0;
     left:0;
-    background-color: lightgrey;
+    background-color:rgb(183, 183, 164);
     overflow-x: hidden;
 }
 
 .sidemenu a {
-    color: rgb(68, 68, 68);
+    color: black;
     padding: 1%;
     text-decoration: none;
     display:block;
@@ -55,7 +54,7 @@ body{
 }
 
 .sidemenu a:hover {
-    background-color: black;
+    background-color: rgb(107, 112, 92);
     color: white;
 }
 
@@ -93,7 +92,7 @@ input, select, button {
   
 .trash-button{
     display: contents;
-    font-size: 65%;
+    font-size: 40%;
 }
   
   
