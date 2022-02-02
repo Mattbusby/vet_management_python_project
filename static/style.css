@@ -12,6 +12,14 @@
     text-align: center;
 }
 
+.pet {
+    text-align: center;
+}
+
+.vet {
+    text-align: center;
+}
+
 body{
     font-family:"Helvetica", Arial, sans-serif; font-size: 16px;
     margin-left:15%;
@@ -23,7 +31,8 @@ body{
 #home-image {
     width:85vw;
     height:20vh;
-    background-image:url('images/sunny_field.jpeg');
+    /* background-image:url('images/sunny_field.jpeg'); */
+    background-color: rgb(221, 190, 169);
     background-repeat:no-repeat;
     background-size:cover;
     /* A5A58D */
