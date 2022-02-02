@@ -72,3 +72,31 @@ body{
     text-align: center;
 }
 
+.buttons {
+    margin-top: 10px;
+    margin-left: 2px;
+    font-size: 1.4em;
+    color: #aab8c2;
+}
+  
+.buttons i {
+    width: 80px;
+}
+  
+input, select, button {
+    font-size: 100%;
+    width : 97%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+  
+.trash-button{
+    display: contents;
+    font-size: 65%;
+}
+  
+  
+.delete-form{
+    display: inline;
+}

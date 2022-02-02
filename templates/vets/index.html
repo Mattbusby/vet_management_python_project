@@ -6,7 +6,8 @@
     <div class="content">
       <a href="/vets/{{vet.id}}">{{vet.first_name}} {{vet.last_name}}</a>
       <div class="title">
-        Graduated from Veterinary College: {{vet.grad_date}}
+        Graduated from Veterinary College: {{vet.grad_date}}<br>
+        - {{vet.fun_fact}}
       </div>
       <div class="buttons">
 
@@ -15,7 +16,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </div><hr>
 {% endfor %}
 
 {% endblock %}
