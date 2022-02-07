@@ -32,8 +32,3 @@ pet_repository.save(pet3)
 
 # pet6 = Pet(   NAME  ETC    , vet2)
 # pet_repository.save(pet6)
-
-# pdb.set_trace()
-
-
-# pets and vets needed

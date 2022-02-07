@@ -52,6 +52,3 @@ def pets(vet):
         pet = Pet(row['pet_name'], row['dob'], row['type_of_animal'], row['owner_name'], row['owner_ph'], row['treatment_notes'], row['vet_id'], row['id'])
         pets.append(pet)
     return pets
-
-
-# check if * needed in delete all & delete(id)

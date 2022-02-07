@@ -46,8 +46,3 @@ def update(pet):
     values = [pet.pet_name, pet.dob, pet.type_of_animal, pet.owner_name, pet.owner_ph, pet.treatment_notes, pet.vet.id, pet.id]
     print(values)
     run_sql(sql, values)
-
-
-
-# check delete all & delete(id) work
-# does update need 'VALUES' before %s's to work?
